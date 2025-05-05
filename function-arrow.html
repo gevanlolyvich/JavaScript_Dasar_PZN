@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function arrow</title>
+</head>
+<body>
+    <script>
+
+        // const sayHello = (name, ...data) => {
+        //     const say = `hello ${name}`;
+        //     console.info(say);
+        // }
+
+        // const sayHello = (name) => console.info(`hello ${name}`);
+        
+        const sayHello = name => console.info(`hello ${name}`);
+        sayHello("eko");
+
+        // const sum = (first, second) => {
+        //     return first + second;
+        // }
+
+        const sum = (first, second) => first + second; //jika satu baris maka tidak usah gunakan return
+        console.info(sum(100,100));
+
+        function giveMeName(callback) {
+            callback("budi");
+        }
+
+        //anonymous function
+        // giveMeName(function (name) {
+        //     console.info(`hello ${name}`);
+        // });
+
+        //arrow function anonymous
+        giveMeName(name => console.info(`hello ${name}`));
+
+    </script>
+</body>
+</html>

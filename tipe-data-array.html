@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body> 
+    <script>
+
+        const names = [];
+        names.push("eko");
+        names.push("kurniawan", "khannedy");
+        names.push("budi", "joko");
+
+        console.table(names);
+
+        console.info(names[0]);
+        console.info(names[1]);
+        console.info(names[2]);
+
+        names[0] = "programmmer";
+        names[1] = "zaman";
+        names[2] = "now";
+        console.table(names);
+
+        delete names[3];
+        console.table(names);
+
+        names.push("eko lagi");
+        console.table(names);
+
+        names[3] = "diubah lagi";
+        names.push(["eko", "kurniawan", "khannedi"]);
+        console.table(names);
+    
+    </script>
+</body>
+</html>

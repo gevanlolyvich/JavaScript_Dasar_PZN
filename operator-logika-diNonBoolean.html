@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operator logika di non boolean</title>
+</head>
+<body>
+    <script>
+        //membandingkan truthy dan falshy
+        //jika truthy || truthy maka diambil yang pertama
+        //jika truthy || falshy maka diambil yang truthy
+        //jika falshy || falshy maka diambil yang terakhir
+        console.info("Hello" || ""); //"hello"
+        console.info("" || []); // []
+        console.info("0" || "NOL"); // "0"
+        console.info(0 || "NOL"); // "NOL"
+        console.info(null || "NULL"); //"NULL"
+        console.info(undefined || "undefined"); // "undefined"
+        console.log(0 || false); // false
+
+        //pemakaian
+        const person = {
+            firstName: "", //falshy
+            lastName: "khannedy"
+        }
+        const name = person.firstName || person.lastName;
+        console.info(name);
+
+        //AND
+        //jika truthy || truthy maka diambil yang terakhir
+        //jika truthy || falshy maka diambil yang falshy
+        //jika falshy || falshy maka diambil yang pertama
+        console.info("hello" && ""); //""
+        console.info("" && []);// ""
+        console.info("0" && "Nol");// "Nol"
+        console.info(null && undefined);// null
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function Rest Parameter</title>
+</head>
+<body>
+    <script>
+        //rest parameter ...data
+        function sum(name, ...data) {
+            let result = 0;
+            for (const item of data) {
+                result += item;
+            }
+            document.writeln(`<p>${name} is ${result}</p>`);
+        }
+
+        // sum("orange", 20, 30, 40 ,50, 60);
+        // sum("grape", 20, 30, 40 ,50, 60);
+        // sum("banana", 20, 30, 40 ,50, 60);
+
+        const values = [10,10,10,10,10];
+        sum("test", ...values);//spread syntax => terjadi karena pada value berbentuk array
+
+
+        //old => tidak disarankan
+        function oldSum() {
+            let total = 0;
+            for (const argument of arguments) {
+                total += argument;
+                document.writeln(`<p>total is ${total}</p>`)
+            }
+        }
+        oldSum(1,2,3,4,5);
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operator in</title>
+</head>
+<body>
+    <script>
+        // in operator cuma mengecek property dan index(array) bukan valuenya
+        const person = {
+            firstName: "Eko",
+            lastName: "khannedy"
+        };
+        if ("firstName" in person) {
+            console.info(`hello ${person.firstName}`);
+        } else {
+            console.info('hello');
+        }
+
+        //in undefined
+        const students = {
+            firstName: "Eko",
+            middleName: undefined,
+            lastName: "khannedy"
+        };
+        if ("middleName" in students) {
+            console.info(`hello ${students.middleName}`);
+        } else {
+            console.info('hello');
+        }
+
+        //in null array
+        const names = [null, "khannedy", null];
+        const result = 0 in names;
+        console.info(`result: ${result}`);
+
+    </script>
+</body>
+</html>

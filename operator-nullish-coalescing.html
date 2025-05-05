@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operator nullissh coalescing</title>
+</head>
+<body>
+    <script>
+
+        let parameter; //undefined
+        let data = parameter;
+        if (data === undefined || data === null) {
+            data = "nilai default";
+        }
+        document.writeln(`<p>${data}</p>`);
+
+        //nullish coalescing => cuma untuk mengcek variabel null atau undefined
+        data = parameter ?? "nilai deafult";
+        document.writeln(`<p>${data}</p>`);
+
+    </script>
+</body>
+</html>

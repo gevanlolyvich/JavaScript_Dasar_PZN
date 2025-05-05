@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Template</title>
+</head>
+<body>
+    <script>
+
+        const name = "Eko Kurniawan Khannedy";
+        const nilai = 80;
+        const template = `Name : ${name}, lulus: ${nilai > 75}`;
+        console.info(template);
+
+        const multiLine = `
+        nama saya eko,
+        sekarang kerja,
+        klo lagi malas paling tidur
+        `;
+        document.writeln("<pre>");
+        document.writeln(multiLine);
+        document.writeln("</pre>");
+
+    </script>
+</body>
+</html>

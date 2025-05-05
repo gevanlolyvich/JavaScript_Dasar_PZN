@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function generator</title>
+</head>
+<body>
+    <script>
+
+        function* createNames() {
+            yield "eko";
+            yield "Kurniawan";
+            yield "khannedy";
+        }
+
+        const names = createNames();
+        //mirip dengan array tapi bukan array karena dia bisa di iterable dengan forOF
+        for (const name of names) {
+            console.info(name);
+        }
+
+        //kasus komplex
+        //Lazy => yield 1x dulu dilanjutkan i 1x, lalu dilanjutkan yield 1x dan dilanjutkan i 1x sampai seterusnya 
+        function* buatGanjil(value) {
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 === 1){
+                    console.info(`yield ${i}`); //saat tidak di iterable dengan forOF ini tidak kan dieksekusi
+                    yield i;
+                }
+            }
+        }
+
+        //eager => menampilkan semua yield baru yag pushnya
+        function buatGanjilArray(value) {
+            const result = [];
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    console.info(`yield ${i}`); //saat tidak di iterable dengan forOF ini kan dieksekusi
+                    result.push(i);
+                }
+            }
+            return result;
+        }
+
+        const numbers = buatGanjil(100);
+        // for (const number of numbers) {
+        //     console.info(number);
+        // }
+        console.info(numbers.next().value); // => yield 1 dan 1
+        console.info(numbers.next().value); // => yield 3 dan 3
+        console.info(numbers.next().value); // => yield 5 dan 5
+
+    </script>
+</body>
+</html>

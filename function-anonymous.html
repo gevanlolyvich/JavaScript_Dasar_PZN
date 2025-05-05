@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function anonymous</title>
+</head>
+<body>
+    <script>
+
+        //cara pertama masukan ke dalam variabel
+        const say = function (name) {
+            document.writeln(`<p>hello ${name}</p>`);
+        }
+        say("eko"); // hello eko
+
+        //cara kedua masukan kedalam parameter
+        function giveMeName(callback) {
+            callback("budi");
+        }
+        giveMeName(function (name) {
+            document.writeln(`hi ${name}`);
+        }); //klo perlu 2 param maka tinggal tambahkan koma
+
+    </script>
+</body>
+</html>

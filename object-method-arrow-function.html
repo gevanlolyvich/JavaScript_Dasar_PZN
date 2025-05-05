@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object method arrow function</title>
+</head>
+<body>
+    <script>
+
+        //arrow function tidak bisa menggunakan:
+        //function generator, this, super, argument object
+        const person = {
+            name: "eko",
+            sayHello: (name) => {
+                console.info(this); //window
+                console.info(`hello ${name}`);
+            }
+        }
+        person.sayHello("budi");
+
+    </script>
+</body>
+</html>
